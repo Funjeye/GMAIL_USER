@@ -1,0 +1,244 @@
+﻿2026-07-14T15:05:13.5123488Z Current runner version: '2.335.1'
+2026-07-14T15:05:13.5158977Z ##[group]Runner Image Provisioner
+2026-07-14T15:05:13.5160384Z Hosted Compute Agent
+2026-07-14T15:05:13.5161338Z Version: 20260624.560
+2026-07-14T15:05:13.5162435Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+2026-07-14T15:05:13.5163788Z Build Date: 2026-06-24T18:26:47Z
+2026-07-14T15:05:13.5164946Z Worker ID: {d45479b2-0248-41e5-ac2a-f546fbb027f8}
+2026-07-14T15:05:13.5166220Z Azure Region: eastus
+2026-07-14T15:05:13.5167478Z ##[endgroup]
+2026-07-14T15:05:13.5169774Z ##[group]Operating System
+2026-07-14T15:05:13.5170845Z Ubuntu
+2026-07-14T15:05:13.5171667Z 24.04.4
+2026-07-14T15:05:13.5172686Z LTS
+2026-07-14T15:05:13.5173616Z ##[endgroup]
+2026-07-14T15:05:13.5174574Z ##[group]Runner Image
+2026-07-14T15:05:13.5175562Z Image: ubuntu-24.04
+2026-07-14T15:05:13.5176510Z Version: 20260705.232.1
+2026-07-14T15:05:13.5179029Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260705.232/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-14T15:05:13.5181805Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260705.232
+2026-07-14T15:05:13.5183555Z ##[endgroup]
+2026-07-14T15:05:13.5185493Z ##[group]GITHUB_TOKEN Permissions
+2026-07-14T15:05:13.5188292Z Contents: write
+2026-07-14T15:05:13.5189925Z Metadata: read
+2026-07-14T15:05:13.5190850Z ##[endgroup]
+2026-07-14T15:05:13.5193823Z Secret source: Actions
+2026-07-14T15:05:13.5195332Z Prepare workflow directory
+2026-07-14T15:05:13.5655048Z Prepare all required actions
+2026-07-14T15:05:13.5710031Z Getting action download info
+2026-07-14T15:05:13.7879801Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-07-14T15:05:13.8686122Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-07-14T15:05:14.0407595Z Complete job name: snapshot-and-notify
+2026-07-14T15:05:14.1134676Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-14T15:05:14.1143764Z ##[group]Run actions/checkout@v4
+2026-07-14T15:05:14.1144553Z with:
+2026-07-14T15:05:14.1145047Z   repository: Funjeye/GMAIL_USER
+2026-07-14T15:05:14.1149320Z   token: ***
+2026-07-14T15:05:14.1149801Z   ssh-strict: true
+2026-07-14T15:05:14.1150288Z   ssh-user: git
+2026-07-14T15:05:14.1150771Z   persist-credentials: true
+2026-07-14T15:05:14.1151299Z   clean: true
+2026-07-14T15:05:14.1151777Z   sparse-checkout-cone-mode: true
+2026-07-14T15:05:14.1152323Z   fetch-depth: 1
+2026-07-14T15:05:14.1152781Z   fetch-tags: false
+2026-07-14T15:05:14.1153265Z   show-progress: true
+2026-07-14T15:05:14.1153753Z   lfs: false
+2026-07-14T15:05:14.1154231Z   submodules: false
+2026-07-14T15:05:14.1154715Z   set-safe-directory: true
+2026-07-14T15:05:14.1155485Z ##[endgroup]
+2026-07-14T15:05:14.2127915Z Syncing repository: Funjeye/GMAIL_USER
+2026-07-14T15:05:14.2129748Z ##[group]Getting Git version info
+2026-07-14T15:05:14.2130576Z Working directory is '/home/runner/work/GMAIL_USER/GMAIL_USER'
+2026-07-14T15:05:14.2131634Z [command]/usr/bin/git version
+2026-07-14T15:05:14.2208063Z git version 2.54.0
+2026-07-14T15:05:14.2229379Z ##[endgroup]
+2026-07-14T15:05:14.2244520Z Temporarily overriding HOME='/home/runner/work/_temp/42b84c3d-ce67-4927-8893-ad22b1b39dce' before making global git config changes
+2026-07-14T15:05:14.2246495Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-14T15:05:14.2249603Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/GMAIL_USER/GMAIL_USER
+2026-07-14T15:05:14.2301258Z Deleting the contents of '/home/runner/work/GMAIL_USER/GMAIL_USER'
+2026-07-14T15:05:14.2304967Z ##[group]Initializing the repository
+2026-07-14T15:05:14.2309827Z [command]/usr/bin/git init /home/runner/work/GMAIL_USER/GMAIL_USER
+2026-07-14T15:05:14.2430130Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-14T15:05:14.2431604Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-14T15:05:14.2432772Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-14T15:05:14.2433698Z hint: call:
+2026-07-14T15:05:14.2434200Z hint:
+2026-07-14T15:05:14.2434818Z hint: 	git config --global init.defaultBranch <name>
+2026-07-14T15:05:14.2435577Z hint:
+2026-07-14T15:05:14.2436295Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-14T15:05:14.2438114Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-14T15:05:14.2439779Z hint:
+2026-07-14T15:05:14.2440738Z hint: 	git branch -m <name>
+2026-07-14T15:05:14.2441831Z hint:
+2026-07-14T15:05:14.2442815Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-14T15:05:14.2444141Z Initialized empty Git repository in /home/runner/work/GMAIL_USER/GMAIL_USER/.git/
+2026-07-14T15:05:14.2452207Z [command]/usr/bin/git remote add origin https://github.com/Funjeye/GMAIL_USER
+2026-07-14T15:05:14.2495846Z ##[endgroup]
+2026-07-14T15:05:14.2496701Z ##[group]Disabling automatic garbage collection
+2026-07-14T15:05:14.2499513Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-14T15:05:14.2526438Z ##[endgroup]
+2026-07-14T15:05:14.2527747Z ##[group]Setting up auth
+2026-07-14T15:05:14.2533677Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-14T15:05:14.2568525Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-14T15:05:14.2938793Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-14T15:05:14.2969892Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-14T15:05:14.3184761Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-14T15:05:14.3213767Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-14T15:05:14.3456169Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-14T15:05:14.3490290Z ##[endgroup]
+2026-07-14T15:05:14.3491152Z ##[group]Fetching the repository
+2026-07-14T15:05:14.3500163Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d63d37855f4d0057816f994464a87de78fff5d75:refs/remotes/origin/main
+2026-07-14T15:05:14.5667082Z From https://github.com/Funjeye/GMAIL_USER
+2026-07-14T15:05:14.5668767Z  * [new ref]         d63d37855f4d0057816f994464a87de78fff5d75 -> origin/main
+2026-07-14T15:05:14.5706713Z ##[endgroup]
+2026-07-14T15:05:14.5708443Z ##[group]Determining the checkout info
+2026-07-14T15:05:14.5710130Z ##[endgroup]
+2026-07-14T15:05:14.5715551Z [command]/usr/bin/git sparse-checkout disable
+2026-07-14T15:05:14.5761165Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-14T15:05:14.5790188Z ##[group]Checking out the ref
+2026-07-14T15:05:14.5792977Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-14T15:05:14.5840957Z Switched to a new branch 'main'
+2026-07-14T15:05:14.5844300Z branch 'main' set up to track 'origin/main'.
+2026-07-14T15:05:14.5851252Z ##[endgroup]
+2026-07-14T15:05:14.5904162Z [command]/usr/bin/git log -1 --format=%H
+2026-07-14T15:05:14.5928131Z d63d37855f4d0057816f994464a87de78fff5d75
+2026-07-14T15:05:14.6228728Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-14T15:05:14.6231512Z ##[group]Run actions/setup-python@v5
+2026-07-14T15:05:14.6232076Z with:
+2026-07-14T15:05:14.6232514Z   python-version: 3.12
+2026-07-14T15:05:14.6232992Z   cache: pip
+2026-07-14T15:05:14.6233437Z   check-latest: false
+2026-07-14T15:05:14.6237554Z   token: ***
+2026-07-14T15:05:14.6238032Z   update-environment: true
+2026-07-14T15:05:14.6238555Z   allow-prereleases: false
+2026-07-14T15:05:14.6239062Z   freethreaded: false
+2026-07-14T15:05:14.6239544Z ##[endgroup]
+2026-07-14T15:05:14.7558317Z ##[group]Installed versions
+2026-07-14T15:05:14.7654358Z (node:2295) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-14T15:05:14.7656340Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-14T15:05:14.7657570Z Successfully set up CPython (3.12.13)
+2026-07-14T15:05:14.7658592Z ##[endgroup]
+2026-07-14T15:05:14.8209404Z [command]/opt/hostedtoolcache/Python/3.12.13/x64/bin/pip cache dir
+2026-07-14T15:05:16.2860824Z /home/runner/.cache/pip
+2026-07-14T15:05:16.3766342Z pip cache is not found
+2026-07-14T15:05:16.3900085Z ##[group]Run pip install -r requirements.txt
+2026-07-14T15:05:16.3900590Z [36;1mpip install -r requirements.txt[0m
+2026-07-14T15:05:16.4141582Z shell: /usr/bin/bash -e {0}
+2026-07-14T15:05:16.4141961Z env:
+2026-07-14T15:05:16.4142320Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:16.4142874Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-14T15:05:16.4143421Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:16.4143904Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:16.4144396Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:16.4144892Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-14T15:05:16.4145331Z ##[endgroup]
+2026-07-14T15:05:17.5730933Z Collecting yfinance==0.2.40 (from -r requirements.txt (line 1))
+2026-07-14T15:05:17.6261377Z   Downloading yfinance-0.2.40-py2.py3-none-any.whl.metadata (11 kB)
+2026-07-14T15:05:17.7568717Z Collecting pandas==2.2.2 (from -r requirements.txt (line 2))
+2026-07-14T15:05:17.7608539Z   Downloading pandas-2.2.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+2026-07-14T15:05:17.9643273Z Collecting numpy==1.26.4 (from -r requirements.txt (line 3))
+2026-07-14T15:05:17.9684141Z   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+2026-07-14T15:05:18.1059523Z Collecting scipy==1.13.1 (from -r requirements.txt (line 4))
+2026-07-14T15:05:18.1100170Z   Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+2026-07-14T15:05:18.1496365Z Collecting requests>=2.31 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.1536234Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-07-14T15:05:18.1668718Z Collecting multitasking>=0.0.7 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.1706553Z   Downloading multitasking-0.0.13-py3-none-any.whl.metadata (16 kB)
+2026-07-14T15:05:18.3709278Z Collecting lxml>=4.9.1 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.3750937Z   Downloading lxml-6.1.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2026-07-14T15:05:18.3940681Z Collecting platformdirs>=2.0.0 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.3980574Z   Downloading platformdirs-4.10.0-py3-none-any.whl.metadata (5.5 kB)
+2026-07-14T15:05:18.4293913Z Collecting pytz>=2022.5 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.4345305Z   Downloading pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+2026-07-14T15:05:18.4735400Z Collecting frozendict>=2.3.4 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.4775810Z   Downloading frozendict-2.4.7-py3-none-any.whl.metadata (23 kB)
+2026-07-14T15:05:18.4964900Z Collecting peewee>=3.16.2 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.5007432Z   Downloading peewee-4.2.2-py3-none-any.whl.metadata (10 kB)
+2026-07-14T15:05:18.5178356Z Collecting beautifulsoup4>=4.11.1 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.5219257Z   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+2026-07-14T15:05:18.5334938Z Collecting html5lib>=1.1 (from yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.5372013Z   Downloading html5lib-1.1-py2.py3-none-any.whl.metadata (16 kB)
+2026-07-14T15:05:18.5523183Z Collecting python-dateutil>=2.8.2 (from pandas==2.2.2->-r requirements.txt (line 2))
+2026-07-14T15:05:18.5565992Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-07-14T15:05:18.5722627Z Collecting tzdata>=2022.7 (from pandas==2.2.2->-r requirements.txt (line 2))
+2026-07-14T15:05:18.5761888Z   Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-07-14T15:05:18.5951014Z Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.11.1->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.5988624Z   Downloading soupsieve-2.8.4-py3-none-any.whl.metadata (4.6 kB)
+2026-07-14T15:05:18.6274537Z Collecting typing-extensions>=4.0.0 (from beautifulsoup4>=4.11.1->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.6319638Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-07-14T15:05:18.6456920Z Collecting six>=1.9 (from html5lib>=1.1->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.6494520Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-07-14T15:05:18.6596425Z Collecting webencodings (from html5lib>=1.1->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.6633657Z   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+2026-07-14T15:05:18.7602157Z Collecting charset_normalizer<4,>=2 (from requests>=2.31->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.7641956Z   Downloading charset_normalizer-3.4.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+2026-07-14T15:05:18.7822824Z Collecting idna<4,>=2.5 (from requests>=2.31->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.7861751Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-07-14T15:05:18.8065674Z Collecting urllib3<3,>=1.26 (from requests>=2.31->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.8102208Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-07-14T15:05:18.8269915Z Collecting certifi>=2023.5.7 (from requests>=2.31->yfinance==0.2.40->-r requirements.txt (line 1))
+2026-07-14T15:05:18.8313300Z   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+2026-07-14T15:05:18.8455188Z Downloading yfinance-0.2.40-py2.py3-none-any.whl (73 kB)
+2026-07-14T15:05:18.8542365Z Downloading pandas-2.2.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+2026-07-14T15:05:18.9742753Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 113.6 MB/s  0:00:00
+2026-07-14T15:05:18.9800103Z Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+2026-07-14T15:05:19.0430611Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 293.7 MB/s  0:00:00
+2026-07-14T15:05:19.0510728Z Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.2 MB)
+2026-07-14T15:05:19.2711719Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.2/38.2 MB 174.9 MB/s  0:00:00
+2026-07-14T15:05:19.2773577Z Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-07-14T15:05:19.2836161Z Downloading frozendict-2.4.7-py3-none-any.whl (16 kB)
+2026-07-14T15:05:19.2894148Z Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+2026-07-14T15:05:19.2956349Z Downloading lxml-6.1.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+2026-07-14T15:05:19.3147263Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 304.2 MB/s  0:00:00
+2026-07-14T15:05:19.3185517Z Downloading multitasking-0.0.13-py3-none-any.whl (16 kB)
+2026-07-14T15:05:19.3248485Z Downloading peewee-4.2.2-py3-none-any.whl (172 kB)
+2026-07-14T15:05:19.3310582Z Downloading platformdirs-4.10.0-py3-none-any.whl (22 kB)
+2026-07-14T15:05:19.3370847Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-07-14T15:05:19.3447050Z Downloading pytz-2026.2-py2.py3-none-any.whl (510 kB)
+2026-07-14T15:05:19.3534632Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-07-14T15:05:19.3598620Z Downloading charset_normalizer-3.4.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+2026-07-14T15:05:19.3663082Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-07-14T15:05:19.3724511Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-07-14T15:05:19.3786376Z Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+2026-07-14T15:05:19.3849239Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-07-14T15:05:19.3904989Z Downloading soupsieve-2.8.4-py3-none-any.whl (37 kB)
+2026-07-14T15:05:19.3961784Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-07-14T15:05:19.4018973Z Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+2026-07-14T15:05:19.4083387Z Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+2026-07-14T15:05:19.6251211Z Installing collected packages: webencodings, pytz, peewee, multitasking, urllib3, tzdata, typing-extensions, soupsieve, six, platformdirs, numpy, lxml, idna, frozendict, charset_normalizer, certifi, scipy, requests, python-dateutil, html5lib, beautifulsoup4, pandas, yfinance
+2026-07-14T15:05:30.5627397Z 
+2026-07-14T15:05:30.5654643Z Successfully installed beautifulsoup4-4.15.0 certifi-2026.6.17 charset_normalizer-3.4.9 frozendict-2.4.7 html5lib-1.1 idna-3.18 lxml-6.1.1 multitasking-0.0.13 numpy-1.26.4 pandas-2.2.2 peewee-4.2.2 platformdirs-4.10.0 python-dateutil-2.9.0.post0 pytz-2026.2 requests-2.34.2 scipy-1.13.1 six-1.17.0 soupsieve-2.8.4 typing-extensions-4.16.0 tzdata-2026.3 urllib3-2.7.0 webencodings-0.5.1 yfinance-0.2.40
+2026-07-14T15:05:30.6404124Z ##[group]Run python options_snapshot.py
+2026-07-14T15:05:30.6404492Z [36;1mpython options_snapshot.py[0m
+2026-07-14T15:05:30.6437622Z shell: /usr/bin/bash -e {0}
+2026-07-14T15:05:30.6437871Z env:
+2026-07-14T15:05:30.6438141Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:30.6438587Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-14T15:05:30.6439006Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:30.6439383Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:30.6439771Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-14T15:05:30.6440152Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-14T15:05:30.6440736Z   GMAIL_USER: ***
+2026-07-14T15:05:30.6440974Z   GMAIL_APP_PASSWORD: ***
+2026-07-14T15:05:30.6441196Z ##[endgroup]
+2026-07-14T15:05:32.5097896Z Failed to get ticker 'GME' reason: Expecting value: line 1 column 1 (char 0)
+2026-07-14T15:05:32.7030060Z $GME: possibly delisted; No price data found  (period=5d)
+2026-07-14T15:05:33.8002388Z GME options pull FAILED: Yahoo Finance returned empty price history.
+2026-07-14T15:05:33.8979911Z ##[error]Process completed with exit code 1.
+2026-07-14T15:05:33.9115754Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-14T15:05:33.9117344Z Post job cleanup.
+2026-07-14T15:05:33.9932375Z [command]/usr/bin/git version
+2026-07-14T15:05:34.0001702Z git version 2.54.0
+2026-07-14T15:05:34.0041569Z Temporarily overriding HOME='/home/runner/work/_temp/0eb333e5-eee9-420c-9a64-15c180d97af0' before making global git config changes
+2026-07-14T15:05:34.0043292Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-14T15:05:34.0048266Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/GMAIL_USER/GMAIL_USER
+2026-07-14T15:05:34.0083679Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-14T15:05:34.0116286Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-14T15:05:34.0339355Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-14T15:05:34.0365184Z http.https://github.com/.extraheader
+2026-07-14T15:05:34.0375883Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-14T15:05:34.0408387Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-14T15:05:34.0624253Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-14T15:05:34.0655702Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-14T15:05:34.0997959Z Cleaning up orphan processes
+2026-07-14T15:05:34.1263476Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -31,6 +31,10 @@ jobs:
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          TRADIER_TOKEN: ${{ secrets.TRADIER_TOKEN }}
+          # Optional: only set this secret if using a free sandbox token
+          # (value: https://sandbox.tradier.com/v1). Omit for a production token.
+          TRADIER_BASE_URL: ${{ secrets.TRADIER_BASE_URL }}
         run: python options_snapshot.py
 
       - name: Commit and push CSV updates

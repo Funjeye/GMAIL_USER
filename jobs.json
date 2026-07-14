@@ -1,0 +1,105 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 87121958824,
+      "run_id": 29343737613,
+      "workflow_name": "GME Options Snapshot",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Funjeye/GMAIL_USER/actions/runs/29343737613",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOTYJLD88AAAAUSN-XqA",
+      "head_sha": "d63d37855f4d0057816f994464a87de78fff5d75",
+      "url": "https://api.github.com/repos/Funjeye/GMAIL_USER/actions/jobs/87121958824",
+      "html_url": "https://github.com/Funjeye/GMAIL_USER/actions/runs/29343737613/job/87121958824",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-07-14T15:05:06Z",
+      "started_at": "2026-07-14T15:05:12Z",
+      "completed_at": "2026-07-14T15:05:35Z",
+      "name": "snapshot-and-notify",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-07-14T15:05:13Z",
+          "completed_at": "2026-07-14T15:05:14Z"
+        },
+        {
+          "name": "Checkout repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-07-14T15:05:14Z",
+          "completed_at": "2026-07-14T15:05:14Z"
+        },
+        {
+          "name": "Set up Python 3.12",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-07-14T15:05:14Z",
+          "completed_at": "2026-07-14T15:05:16Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-07-14T15:05:16Z",
+          "completed_at": "2026-07-14T15:05:30Z"
+        },
+        {
+          "name": "Run options snapshot script",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5,
+          "started_at": "2026-07-14T15:05:30Z",
+          "completed_at": "2026-07-14T15:05:33Z"
+        },
+        {
+          "name": "Commit and push CSV updates",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-07-14T15:05:33Z",
+          "completed_at": "2026-07-14T15:05:33Z"
+        },
+        {
+          "name": "Post Set up Python 3.12",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-07-14T15:05:33Z",
+          "completed_at": "2026-07-14T15:05:33Z"
+        },
+        {
+          "name": "Post Checkout repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-07-14T15:05:33Z",
+          "completed_at": "2026-07-14T15:05:34Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-07-14T15:05:34Z",
+          "completed_at": "2026-07-14T15:05:34Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Funjeye/GMAIL_USER/check-runs/87121958824",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000000,
+      "runner_name": "GitHub Actions 1000000000",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}
