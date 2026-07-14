@@ -1,0 +1,43 @@
+name: GME Options Snapshot
+
+on:
+  # GitHub cron runs in UTC. 13:45 UTC = 6:45 AM PDT (Summer) or 5:45 AM PST (Winter). 
+  # GitHub does not automatically shift for Daylight Saving Time.
+  schedule:
+    - cron: '45 13 * * 1-5'
+  # Allows triggering the workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  snapshot-and-notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip' # Caches dependencies to speed up daily runs
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run options snapshot script
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python options_snapshot.py
+
+      - name: Commit and push CSV updates
+        # Using git diff prevents workflow failures on the off-chance the file didn't change
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/gme_puts_history.csv
+          git diff --staged --quiet || git commit -m "Auto-update GME options history [skip ci]"
+          git push
