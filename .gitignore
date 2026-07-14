@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .venv/
+joblog.txt
+jobs.json
+*.tmp
