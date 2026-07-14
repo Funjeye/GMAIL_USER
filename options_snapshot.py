@@ -7,7 +7,7 @@ import os
 import sys
 import csv
 import smtplib
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 
 import yfinance as yf
@@ -50,7 +50,7 @@ def send_email(subject, body):
         server.send_message(msg)
 
 def main():
-    now_utc = datetime.utcnow()
+    now_utc = datetime.now(timezone.utc)
     date_str = now_utc.strftime("%Y-%m-%d")
     
     try:
@@ -65,10 +65,16 @@ def main():
         prev_close = float(hist['Close'].iloc[-2]) if len(hist) > 1 else last_price
         pct_change = ((last_price - prev_close) / prev_close) * 100
         
-        # Info dict is the only place yfinance exposes real-time Bid/Ask for equities
-        info = ticker.info
-        bid = info.get('bid', 0.0)
-        ask = info.get('ask', 0.0)
+        # Bid/ask come from ticker.info — the flakiest call in yfinance (Yahoo
+        # rate-limits it hard from cloud IPs). Never let it sink the whole run;
+        # the options chain below is the actual payload and must survive a bad .info.
+        bid = ask = float("nan")
+        try:
+            info = ticker.info
+            bid = info.get('bid') or float("nan")
+            ask = info.get('ask') or float("nan")
+        except Exception as e:
+            print(f"Warning: bid/ask fetch failed ({e}); continuing without it.")
         
         min_date = (now_utc + timedelta(days=5)).date()
         max_date = (now_utc + timedelta(days=35)).date()
