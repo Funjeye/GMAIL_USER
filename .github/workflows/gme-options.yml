@@ -42,7 +42,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/gme_puts_history.csv
+          git add data/gme_options_history.csv
           git diff --staged --quiet || git commit -m "Auto-update GME options history [skip ci]"
           # Rebase on any moved branch before pushing so a concurrent commit can't fail the push
           git pull --rebase origin main
