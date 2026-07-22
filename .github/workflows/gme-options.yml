@@ -1,18 +1,30 @@
 name: GME Options Snapshot
 
 on:
-  # GitHub cron runs in UTC. 13:47 UTC = 6:47 AM PDT (Summer) or 5:47 AM PST (Winter).
+  # GitHub cron runs in UTC. 14:47 UTC = 7:47 AM PDT (Summer) or 6:47 AM PST (Winter).
   # GitHub does not automatically shift for Daylight Saving Time.
   #
-  # Minute is deliberately off the quarter-hour. Scheduled runs on shared runners
-  # queue heavily at :00/:15/:30/:45 — at '45 13' this job started 77-108 min late
-  # every day (7/15-7/21), so the email landed ~8:25 AM PT instead of ~6:45.
-  # The job itself takes ~20 seconds. Do not move this back to a :00/:05/:15/:30/:45 minute.
+  # Two constraints set this time. Do not change it without re-checking both.
   #
-  # Floor: the run must execute AFTER the 13:30 UTC market open. Tradier's sandbox
-  # feed is ~15 min delayed, so an earlier fire would email pre-open/stale quotes.
+  # 1. Minute is deliberately OFF the quarter-hour. Scheduled runs on shared runners
+  #    queue heavily at :00/:15/:30/:45. At the old '45 13' this job started 77-108
+  #    minutes late every single day (7/15 through 7/21), so the email landed around
+  #    8:25 AM PT instead of 6:45. The job itself runs in ~20 seconds.
+  #    Never move this back onto a :00/:05/:15/:30/:45 minute.
+  #
+  # 2. It must fire WELL AFTER the 13:30 UTC market open, not just after it. Measured
+  #    on 2026-07-22: a 14:02 UTC pull returned unusable spreads (the 8/7 $21.50 put
+  #    quoted 0.16/0.74 and actually traded near 0.40), while a 16:44 pull was tight
+  #    (0.37/0.43). Books are too thin in the first half hour to price a limit order.
+  #    Tradier's sandbox feed is also ~15 min delayed, so an earlier fire compounds it.
+  #
+  # Net: 14:47 UTC keeps the known-good quote window and still beats the old
+  # ~8:25 AM PT delivery by roughly 40 minutes.
+  #
+  # For a chain RIGHT NOW, don't wait on cron: workflow_dispatch starts instantly
+  # (confirmed 7/14 and twice on 7/22, zero queue delay).
   schedule:
-    - cron: '47 13 * * 1-5'
+    - cron: '47 14 * * 1-5'
   # Allows triggering the workflow manually from the Actions tab
   workflow_dispatch:
 
